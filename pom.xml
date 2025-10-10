@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/0b866d09-2baf-4c12-8c47-4f43721271ab -->
     <groupId>com.example</groupId>
-    <artifactId>app</artifactId>
+    <artifactId>ToDoApp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     
@@ -52,6 +52,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.vaadin.addons/qrcode -->
+        <dependency>
+            <groupId>org.vaadin.addons</groupId>
+            <artifactId>qrcode</artifactId>
+            <version>2.1</version>
         </dependency>
     </dependencies>
     
