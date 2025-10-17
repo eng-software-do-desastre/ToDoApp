@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"com.example","l":"Application"},{"p":"com.example.base.ui","l":"MainLayout"},{"p":"com.example.examplefeature","l":"Task"},{"p":"com.example.examplefeature","l":"TaskService"},{"p":"com.example.base.ui.component","l":"ViewToolbar"}];updateSearchResults();
