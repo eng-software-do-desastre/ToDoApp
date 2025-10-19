@@ -12,7 +12,7 @@
  * </p>
  */
 @NullMarked
-package com.example.emailfeature;
+package com.example.task;
 // TODO Remove this package once you have added real features
 
 import org.jspecify.annotations.NullMarked;

@@ -1,11 +1,10 @@
-package com.example.examplefeature;
+package com.example.task;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-import java.util.List;
 interface TaskRepository extends JpaRepository<Task, Long>, JpaSpecificationExecutor<Task> {
 
     // If you don't need a total row count, Slice is better than Page as it only performs a select query.

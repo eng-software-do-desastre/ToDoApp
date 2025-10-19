@@ -1,8 +1,9 @@
-package com.example.emailfeature.ui;
+package com.example.task.ui;
 
 import com.example.base.ui.component.ViewToolbar;
-import com.example.emailfeature.Task;
-import com.example.emailfeature.TaskService;
+import com.example.task.Task;
+import com.example.task.TaskService;
+import com.example.pdf.Writer;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.datepicker.DatePicker;
@@ -33,6 +34,7 @@ class TaskListView extends Main {
     final TextField description;
     final DatePicker dueDate;
     final Button createBtn;
+    final Button pdfButton;
     final Grid<Task> taskGrid;
 
     TaskListView(TaskService taskService) {
@@ -67,8 +69,18 @@ class TaskListView extends Main {
         addClassNames(LumoUtility.BoxSizing.BORDER, LumoUtility.Display.FLEX, LumoUtility.FlexDirection.COLUMN,
                 LumoUtility.Padding.MEDIUM, LumoUtility.Gap.SMALL);
 
-        add(new ViewToolbar("Task List", ViewToolbar.group(description, dueDate, createBtn)));
+        this.pdfButton = new Button("Export to PDF", event -> exportToPDF());
+        createBtn.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
+
+        add(new ViewToolbar("Task List", ViewToolbar.group(description, dueDate, createBtn, pdfButton)));
+
         add(taskGrid);
+    }
+
+    private void exportToPDF() {
+        Writer w = new Writer(taskService.all());
+
+        w.write();
     }
 
     private void createTask() {

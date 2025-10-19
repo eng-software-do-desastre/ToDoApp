@@ -1,4 +1,4 @@
-package com.example.emailfeature;
+package com.example.task;
 
 import jakarta.persistence.*;
 import org.jspecify.annotations.Nullable;

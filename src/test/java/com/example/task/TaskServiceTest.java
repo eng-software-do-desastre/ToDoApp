@@ -1,4 +1,4 @@
-package com.example.examplefeature;
+package com.example.task;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

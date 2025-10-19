@@ -1,4 +1,4 @@
-package com.example.emailfeature;
+package com.example.task;
 
 import org.apache.commons.mail.EmailException;
 import org.jspecify.annotations.Nullable;
@@ -10,7 +10,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
 
-@Service("emailFeatureTaskService")
+@Service
 public class TaskService {
 
     private final TaskRepository taskRepository;
@@ -57,10 +57,10 @@ public class TaskService {
         }
     }
 
-
     @Transactional(readOnly = true)
     public List<Task> list(Pageable pageable) {
         return taskRepository.findAllBy(pageable).toList();
     }
 
+    public List<Task> all() { return taskRepository.findAll(); }
 }
