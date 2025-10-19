@@ -9,6 +9,7 @@ import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.datepicker.DatePicker;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Main;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.textfield.TextField;
@@ -22,6 +23,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Optional;
 
+import static com.example.qrcode.QRCodeGenerator.showQrCodeBase64;
 import static com.vaadin.flow.spring.data.VaadinSpringDataHelpers.toSpringPageRequest;
 
 @Route("")
@@ -74,6 +76,9 @@ class TaskListView extends Main {
 
         add(new ViewToolbar("Task List", ViewToolbar.group(description, dueDate, createBtn, pdfButton)));
 
+        // para adicionar o botão QR
+        taskGrid.addComponentColumn(this::createQrCodeButton).setHeader("QR Code");
+
         add(taskGrid);
     }
 
@@ -90,6 +95,13 @@ class TaskListView extends Main {
         dueDate.clear();
         Notification.show("Task added", 3000, Notification.Position.BOTTOM_END)
                 .addThemeVariants(NotificationVariant.LUMO_SUCCESS);
+    }
+
+    private Button createQrCodeButton(Task task) {
+        // Usa o ícone QRCODE do Vaadin. Se falhar, use: new Button("QR");
+        var qrButton = new Button(VaadinIcon.QRCODE.create());
+        qrButton.addClickListener(event -> showQrCodeBase64(task));
+        return qrButton;
     }
 
 }
