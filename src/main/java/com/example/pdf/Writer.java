@@ -1,6 +1,6 @@
 package com.example.pdf;
 
-import com.example.examplefeature.Task;
+import com.example.task.Task;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 

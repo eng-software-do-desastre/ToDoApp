@@ -1,4 +1,4 @@
-package com.example.examplefeature;
+package com.example.task;
 
 import org.apache.commons.mail.EmailException;
 import org.jspecify.annotations.Nullable;

@@ -1,8 +1,8 @@
-package com.example.examplefeature.ui;
+package com.example.task.ui;
 
 import com.example.base.ui.component.ViewToolbar;
-import com.example.examplefeature.Task;
-import com.example.examplefeature.TaskService;
+import com.example.task.Task;
+import com.example.task.TaskService;
 import com.example.pdf.Writer;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
