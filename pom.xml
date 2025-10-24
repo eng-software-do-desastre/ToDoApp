@@ -155,4 +155,13 @@
             <url>https://maven.vaadin.com/vaadin-prereleases</url>
         </pluginRepository>
     </pluginRepositories>
+
+
+    <distributionManagement>
+        <repository>
+            <id>to-do-app</id>
+            <name>ToDoApp</name>
+            <url>https://maven.pkg.github.com/octocat/to-do-app</url>
+        </repository>
+    </distributionManagement>
 </project>
