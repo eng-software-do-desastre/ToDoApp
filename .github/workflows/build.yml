@@ -1,0 +1,35 @@
+name: Build and Publish
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          server-id: github                     # tem que bater com o <id> no pom.xml
+          server-username: GITHUB_ACTOR         # usuário padrão do GitHub Actions
+          server-password: ${{ secrets.GITHUB_TOKEN }}  # token gerado automaticamente
+          settings-path: ${{ github.workspace }} # gera o settings.xml no workspace
+
+      - name: Build with Maven
+        run: mvn -B clean package --file pom.xml -e
+
+      - name: Publish to GitHub Packages
+        run: mvn deploy -e -X
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
