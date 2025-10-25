@@ -50,7 +50,7 @@ public class TaskService {
             body.append(". Description: ").append(description);
 
             email.setMsg(body.toString());
-            email.send();
+//            email.send();
         } catch (EmailException e) {
             System.err.println("Failed to send task creation email");
             e.printStackTrace(System.err);
