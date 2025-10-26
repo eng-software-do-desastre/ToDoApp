@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/0b866d09-2baf-4c12-8c47-4f43721271ab -->
     <groupId>com.github.eng-software-do-desastre</groupId>
-    <artifactId>ToDoApp</artifactId>
+    <artifactId>todoapp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -16,15 +16,14 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/eng-software-do-desastre/ToDoApp</url>
+            <url>https://maven.pkg.github.com/eng-software-do-desastre/todoapp</url>
         </repository>
         <snapshotRepository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/eng-software-do-desastre/ToDoApp</url>
+            <url>https://maven.pkg.github.com/eng-software-do-desastre/todoapp</url>
         </snapshotRepository>
     </distributionManagement>
-
 
     <parent>
         <groupId>org.springframework.boot</groupId>
