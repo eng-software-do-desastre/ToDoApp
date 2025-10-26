@@ -14,6 +14,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.time.LocalDate;
 
+
 public class Email {
 
     private String to;
