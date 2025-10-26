@@ -1,5 +1,20 @@
 package com.example.emailfeature;
 
+import org.apache.commons.mail.EmailException;
+import org.jspecify.annotations.Nullable;
+
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H3;
+import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.button.Button;
+
+import javax.swing.*;
+import java.awt.*;
+import java.time.LocalDate;
+
+
 public class Email {
 
     private String to;
