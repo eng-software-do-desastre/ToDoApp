@@ -2,6 +2,8 @@
 
 - [ ] TODO Replace or update this README with instructions relevant to your application
 
+Demo video: https://youtu.be/aNzAR2AjkMY
+
 ## Project Structure
 
 The sources of your App have the following structure:
