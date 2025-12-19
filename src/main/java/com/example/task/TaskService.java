@@ -8,8 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionSynchronization;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
-import javax.swing.*;
-import java.awt.*;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
@@ -47,8 +45,6 @@ public class TaskService {
             Email.emailSend(description, dueDate);
         }
     }
-
-
 
 
     @Transactional(readOnly = true)
